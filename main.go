@@ -329,7 +329,7 @@ func taskRunEC2(ctx context.Context, cfg aws.Config) {
 	ami := "ami-051f7e7f6c2f40dc1"
 	runOut, err := cli.RunInstances(ctx, &ec2.RunInstancesInput{
 		ImageId:      aws.String(ami),
-		InstanceType: ec2t.InstanceTypeT3Nano,
+		InstanceType: ec2t.InstanceTypeT3Micro,
 		MinCount:     aws.Int32(1),
 		MaxCount:     aws.Int32(1),
 	})
