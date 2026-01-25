@@ -1366,7 +1366,7 @@ func main() {
 	connType := input("选择 [1]: ", "1")
 
 	if connType == "2" {
-		rawProxy := input("请输入代理地址 (host:port:user:pass 或 socks5://...): ", "")
+		rawProxy := input("请输入代理地址 [socks5://127.0.0.1:10808]: ", "socks5://127.0.0.1:10808")
 		GlobalProxy = parseProxyString(rawProxy)
 		if GlobalProxy != "" {
 			fmt.Println("🔄 使用代理:", GlobalProxy)
